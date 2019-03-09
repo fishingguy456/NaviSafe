@@ -57,7 +57,7 @@ public class Main {
 		//if the file does not exist, it will generate a new file with this name
 
 		//initiates the file
-		File textFile = new File(fileName + ".csv");
+		File textFile = new File("data.csv");
 
 		//********If a file is found**************
 		if (textFile.exists() && !textFile.isDirectory()) {

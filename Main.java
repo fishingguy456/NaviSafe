@@ -22,6 +22,11 @@ public class Main {
 		int a = Integer.parseInt(st1.nextToken());
 		int b = Integer.parseInt(st1.nextToken());
 		
+		for(int i = 0; i < 140; i++) {
+			graph[i] = new ArrayList<Node>();
+		}
+		
+		
 		readFile();
 		PriorityQueue<Node> pq = new PriorityQueue<Node>();
 		double rate[] = new double[140];
@@ -74,9 +79,6 @@ public class Main {
 				//other temporary variables used
 				String[] tmpStrings;
 				
-				for(int i = 0; i < 140; i++) {
-					graph[i] = new ArrayList<Node>();
-				}
 				
 				while ((nextLine = MyBuffer.readLine()) != null) {
 					tmpStrings = nextLine.split("\t");

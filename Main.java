@@ -21,25 +21,15 @@ public class Main {
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
         public static ArrayList<Node> graph[] = new ArrayList[2001];
-        /*for(int i = 0; i < 2001; i++) {
+        for(int i = 0; i < 2001; i++) {
             graph[i] = new ArrayList<Node>();
-        }*/
-        for(int i = 0; i < m; i++) {
-            StringTokenizer st1 = new StringTokenizer(br.readLine());
-            int code = Integer.parseInt(st1.nextToken());
-            int t = Integer.parseInt(st1.nextToken());
-            int r = Integer.parseInt(st1.nextToken());
-            if (a>2) {
-                graph[a].add(new Node(a+1, t, r));
-            }
-            graph[a].add(new Node(a-1, t, r));
-            graph[a].add(new Node(a-2, t, r));
-            graph[a].add(new Node(a+2, t, r));
-        }PriorityQueue<Node> pq = new PriorityQueue<Node>();
-        int distance[] = new int[2001];
-        String route[] = new String[2001];
+        }
+        readFile("data")
+	PriorityQueue<Node> pq = new PriorityQueue<Node>();
+        int distance[] = new int[140];
+        String route[] = new String[140];
         Arrays.fill(route, "")
-        boolean visited[] = new boolean[2001];
+        boolean visited[] = new boolean[140];
         StringTokenizer st1 = new StringTokenizer(br.readLine());
         int a = Integer.parseInt(st1.nextToken());
         int b = Integer.parseInt(st1.nextToken());
@@ -103,14 +93,27 @@ public static void readFile(String fileName) {
 				}
 				
 				//do something to make the second veriable an int 
-				
+				int tmpInt = Integer.parseInt(tmpStrings[1])
+		
 				//do something to make the third veriable a double
-				
+				double tmpDouble = Double.parseDouble(tmpStrings[2])
 				
 				//adds the student to the master list
-				Node node = new Node(tmpStrings[0], tmpStrings[1], tmpStrings[2]);
+				Node node = new Node(tmpStrings[0], tmpInt, tmpDouble);
 				graph.add(node);
-				
+				if (a<138) {
+                			graph[a].add(new Node(a+1, t, r));
+					if (a<139) {
+						graph[a].add(new Node(a+2, t, r));
+					}
+            			}
+			    	if (a>0) {
+					graph[a].add(new Node(a-1, t, r));
+					if (a>1) {
+						graph[a].add(new Node(a-2, t, r));
+					}
+			    	}
+
 			}//end while loop for reading info
 
 

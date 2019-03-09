@@ -20,7 +20,7 @@ public class Main {
         int crimeRate = Integer.parseInt(st.nextToken());
         int n = Integer.parseInt(st.nextToken());
         int m = Integer.parseInt(st.nextToken());
-        ArrayList<Node> graph[] = new ArrayList[2001];
+        public static ArrayList<Node> graph[] = new ArrayList[2001];
         /*for(int i = 0; i < 2001; i++) {
             graph[i] = new ArrayList<Node>();
         }*/
@@ -69,6 +69,74 @@ public class Main {
         }
     }
 }
+
+public static void readFile(String fileName) {
+	//the program will try to find the file data which is saved as a text file
+	//if the file does not exist, it will generate a new file with this name
+	
+	//initiates the file
+	File textFile = new File(fileName + ".csv");
+
+	//********If a file is found**************
+	if (textFile.exists() && !textFile.isDirectory()) {
+		//reading from the file to fill variables
+		System.out.println("file successfully found... collecting data");
+		try {
+			//creates the writer for the file
+			FileReader MyReader = new FileReader(fileName + ".csv");
+			BufferedReader MyBuffer = new BufferedReader(MyReader);
+
+			//reading the file and adding the strings to the student list
+			//Need to read first line in order to remove titles from data
+			String nextLine = MyBuffer.readLine();
+			//other temporary variables used
+			String[] tmpStrings;
+			String title;
+			int area;
+			double rate;
+			while ((nextLine = MyBuffer.readLine()) != null) {
+				tmpStrings = nextLine.split("\t");
+
+				//trims off spaces of each variable that may have been entered
+				for (int i=0; i<tmpStrings.length; i++) {
+					tmpStrings[i] = tmpStrings[i].trim();
+				}
+				
+				//do something to make the second veriable an int 
+				
+				//do something to make the third veriable a double
+				
+				
+				//adds the student to the master list
+				Node node = new Node(tmpStrings[0], tmpStrings[1], tmpStrings[2]);
+				graph.add(node);
+				
+			}//end while loop for reading info
+
+
+			MyBuffer.close();//closes buffer so file does not corrupt
+
+		} catch (IOException e) {
+			System.out.println("error while reading file");
+		}
+
+
+		//********If no file of that name is found***************
+	} else {
+		//creating the event with the input event name
+		System.out.println("no file of that name found... generating new file");
+		try {
+			//creates the writer for the file; creating the file
+			FileWriter MyWriter = new FileWriter(eventName + ".csv");
+			MyWriter.close();
+		} catch (IOException e) {
+			System.out.println("error while writing file");
+		}
+
+	}
+
+
+}//end of function
 
 
 

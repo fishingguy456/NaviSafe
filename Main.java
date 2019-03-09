@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.*;
 
@@ -18,6 +17,10 @@ public class Main {
 	}
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		StringTokenizer st1 = new StringTokenizer(br.readLine());
+		int a = Integer.parseInt(st1.nextToken());
+		int b = Integer.parseInt(st1.nextToken());
 		
 		readFile();
 		PriorityQueue<Node> pq = new PriorityQueue<Node>();
@@ -26,9 +29,6 @@ public class Main {
 		Arrays.fill(route, "");
 		Arrays.fill(rate, Integer.MAX_VALUE);
 
-		StringTokenizer st1 = new StringTokenizer(br.readLine());
-		int a = Integer.parseInt(st1.nextToken());
-		int b = Integer.parseInt(st1.nextToken());
 		
 		pq.add(new Node(a, 0));
 		while(!pq.isEmpty()) {
@@ -65,7 +65,7 @@ public class Main {
 			System.out.println("file successfully found... collecting data");
 			try {
 				//creates the writer for the file
-				FileReader MyReader = new FileReader(fileName + ".csv");
+				FileReader MyReader = new FileReader("data.csv");
 				BufferedReader MyBuffer = new BufferedReader(MyReader);
 
 				//reading the file and adding the strings to the student list

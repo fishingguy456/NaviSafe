@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-	public static ArrayList<Node> graph[] = new ArrayList[2001];
+	public static ArrayList<Node> graph[] = new ArrayList[140];
 
 	public static class Node implements Comparable<Node>{
 		int node;
@@ -18,18 +18,18 @@ public class Main {
 	}
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		for(int i = 0; i < 2001; i++) {
-			graph[i] = new ArrayList<Node>();
-		}
+		
 		readFile("data");
 		PriorityQueue<Node> pq = new PriorityQueue<Node>();
 		double rate[] = new double[140];
 		String route[] = new String[140];
 		Arrays.fill(route, "");
+		Arrays.fill(rate, Integer.MAX_VALUE);
+
 		StringTokenizer st1 = new StringTokenizer(br.readLine());
 		int a = Integer.parseInt(st1.nextToken());
 		int b = Integer.parseInt(st1.nextToken());
-		Arrays.fill(rate, Integer.MAX_VALUE);
+		
 		pq.add(new Node(a, 0));
 		while(!pq.isEmpty()) {
 			Node curr = pq.poll();
@@ -46,7 +46,7 @@ public class Main {
 				}
 			}
 		}if (rate[b]!=Integer.MAX_VALUE) {
-			System.out.println(rate[b]);
+			System.out.println(rate[b]+" "+route[b]);
 		} else {
 			System.out.println("Not possible");
 		}
@@ -73,6 +73,11 @@ public class Main {
 				String nextLine = MyBuffer.readLine();
 				//other temporary variables used
 				String[] tmpStrings;
+				
+				for(int i = 0; i < 140; i++) {
+					graph[i] = new ArrayList<Node>();
+				}
+				
 				while ((nextLine = MyBuffer.readLine()) != null) {
 					tmpStrings = nextLine.split("\t");
 
@@ -86,17 +91,22 @@ public class Main {
 
 					//do something to make the third veriable a double
 					double tmpDouble = Double.parseDouble(tmpStrings[2]);
+					
+					System.out.println(tmpInt+" "+tmpDouble);
+
 
 					//adds the student to the master list
 					graph[tmpInt].add(new Node(tmpInt, tmpDouble));
 					
 					if (tmpInt<138) {
+						System.out.println(tmpInt+" "+tmpDouble);
 						graph[tmpInt].add(new Node(tmpInt+1, tmpDouble));
 						if (tmpInt<139) {
 							graph[tmpInt].add(new Node(tmpInt+2, tmpDouble));
 						}
 					}
-					if (tmpInt>0) {
+					else if (tmpInt>0) {
+						System.out.println(tmpInt+" "+tmpDouble);
 						graph[tmpInt].add(new Node(tmpInt-1, tmpDouble));
 						if (tmpInt>1) {
 							graph[tmpInt].add(new Node(tmpInt-2, tmpDouble));
@@ -114,7 +124,9 @@ public class Main {
 
 
 			//********If no file of that name is found***************
-		} 
+		} else {
+			System.out.println("Humber Summit: 21\nBlack Creek: 24\nYork University Heights: 27\nBathurst Manor: 34");
+		}
 
 	}//end of 
 

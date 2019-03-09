@@ -19,7 +19,7 @@ public class Main {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		readFile("data");
+		readFile();
 		PriorityQueue<Node> pq = new PriorityQueue<Node>();
 		double rate[] = new double[140];
 		String route[] = new String[140];
@@ -52,7 +52,7 @@ public class Main {
 		}
 	}
 
-	public static void readFile(String fileName) {
+	public static void readFile() {
 		//the program will try to find the file data which is saved as a text file
 		//if the file does not exist, it will generate a new file with this name
 

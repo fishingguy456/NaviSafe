@@ -11,7 +11,7 @@ While coding the algorithm, we ran into some buggy code that led to a few errors
 We utilized algorithms and we were able to host our website.
 
 ## Front-end portion
-[navisafe.tk](navisafe.tk)
+http://navisafe.tk
 
 ## See it on DevPost
 https://devpost.com/software/navisafe-7zsknq

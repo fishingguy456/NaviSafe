@@ -8,9 +8,10 @@ https://github.com/kevinjycui/SafeArrival
 ## Challenges we ran into
 While coding the algorithm, we ran into some buggy code that led to a few errors. We also ran into a few problems while hosting the website.
 ## Accomplishments that we're proud of
-We utilized graph algorithms and we were able to host our website.
+We utilized graph theory algorithms and we were able to host our website.
 ## Front-end portion
 Front-end designed and developed by Nick Tao
+
 http://navisafe.tk
 ## See it on DevPost
 https://devpost.com/software/navisafe-7zsknq

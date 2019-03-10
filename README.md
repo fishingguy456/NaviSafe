@@ -10,16 +10,20 @@ While coding the algorithm, we ran into some buggy code that led to a few errors
 ## Accomplishments that we're proud of
 We utilized graph theory algorithms and we were able to host our website.
 ## Team members and contributions
-[Bill Liu](https://github.com/penguinofwinter)
+Bill Liu ([penguinofwinter](https://github.com/penguinofwinter))
 * Back-end (file reader)
 * Lead Presenter
-[Kevin Cui](https://github.com/kevinjycui)
+
+Kevin Cui ([kevinjycui](https://github.com/kevinjycui))
 * Back-end (graph traversal, index algorithm)
-[Kevin Qu](https://github.com/fishingguy456)
+
+Kevin Qu ([fishingguy456](https://github.com/fishingguy456))
 * Back-end (graph traversal)
-[Nick Tao](https://github.com/nicktao88)
+
+Nick Tao ([nicktao88](https://github.com/nicktao88))
 * Front-end (mock-up)
 * Demo presenter
+
 ## Front-end portion
 Front-end designed and developed by Nick Tao
 http://navisafe.tk

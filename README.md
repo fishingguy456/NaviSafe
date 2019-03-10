@@ -15,7 +15,8 @@ Bill Liu ([penguinofwinter](https://github.com/penguinofwinter))
 * Lead Presenter
 
 Kevin Cui ([kevinjycui](https://github.com/kevinjycui))
-* Back-end (graph traversal, index algorithm)
+* Back-end (graph traversal, index algorithm, file reader)
+* Dataset collector
 
 Kevin Qu ([fishingguy456](https://github.com/fishingguy456))
 * Back-end (graph traversal)

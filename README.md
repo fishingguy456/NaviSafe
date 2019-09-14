@@ -16,14 +16,15 @@ Bill Liu ([penguinofwinter](https://github.com/penguinofwinter))
 
 Kevin Cui ([kevinjycui](https://github.com/kevinjycui))
 * Back-end (graph traversal, index algorithm, file reader)
-* Dataset collector
+* Dataset Collector
 
 Kevin Qu ([fishingguy456](https://github.com/fishingguy456))
 * Back-end (graph traversal)
+* Dataset Collector
 
 Nick Tao ([nicktao88](https://github.com/nicktao88))
 * Front-end (mock-up)
-* Demo presenter
+* Demo Presenter
 
 ## Front-end portion
 Front-end designed and developed by Nick Tao

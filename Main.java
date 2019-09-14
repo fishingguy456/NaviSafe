@@ -88,10 +88,10 @@ public class Main {
 						tmpStrings[i] = tmpStrings[i].trim();
 					}
 
-					//do something to make the second veriable an int 
+					//do something to make the second variable an int 
 					int tmpInt = Integer.parseInt(tmpStrings[1]);
 
-					//do something to make the third veriable a double
+					//do something to make the third variable a double
 					double tmpDouble = Double.parseDouble(tmpStrings[2]);
 					
 					System.out.println(tmpInt+" "+tmpDouble);
